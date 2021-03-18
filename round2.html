@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <head>
+      <title>Round 2</title>
+
+  </head>
+  <style>
+      #camera{
+          height: 250px;
+          width: 250px;
+          border-style: solid;
+      }
+  </style>
+  <body>
+  <h1>Welcome to Round 2</h1>
+   <div id="camera"></div>
+   <button onclick="take_snapshot()">Take A Snap</button>
+   <div id="results"></div>
+   <button onclick="upload_snapshot()">Upload</button>
+   <a href="{{url_for('getphoto3')}}"><button >Proceed To Next Round</button></a>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+  <script>
+      Webcam.set({
+          width:250,
+          height:250,
+          image_format:'jpeg',
+          jpeg_quality:90
+      })
+      Webcam.attach("#camera")
+
+      function take_snapshot() {
+
+     // take snapshot and get image data
+     Webcam.snap( function(data_uri) {
+      // display results in page
+      document.getElementById('results').innerHTML =
+      '<img id="image" src="'+data_uri+'"/>';
+      } );
+    }
+    function upload_snapshot() {
+       var data_uri = document.getElementById('image').src;
+       var formdata = new FormData();
+
+       formdata.append("base64image", data_uri);
+       console.log(formdata)
+       alert(data_uri)
+       var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "/getphoto2");
+        xmlhttp.send(formdata);
+           }
+
+
+  </script>
+</html>

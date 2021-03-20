@@ -1,28 +1,292 @@
 <!DOCTYPE html>
   <head>
       <title>Round 3</title>
+      
 
-  </head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+
+
+    <link href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            rel="stylesheet"> 
+  
+    <script src= 
+"http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 
+    type="text/javascript"> 
+  
+    </script> 
+  
+    <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"> 
+    </script>
+    <link rel="stylesheet" href="style.css"> 
+
   <style>
       #camera{
-          height: 250px;
-          width: 250px;
-          border-style: solid;
+          height: 500px;
+          width: 500px;
+          
       }
   </style>
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ .continue:focus {
+     outline: none
+ }
+
+ .continue {
+     border-radius: 12px;
+     text-transform: capitalize;
+     font-size: 15px;
+     padding: 8px 40px;
+     cursor: pointer;
+     color: #000000;
+background-color: #fe7bb0;
+background-image: linear-gradient(315deg, #fe7bb0 0%, #ff748b 74%);
+     border: none;
+     outline: none; 
+
+ }
+
+
+ .continue:hover {
+    opacity: 0.6;
+ }
+</style>
+  </head>
   <body>
-  <h1>Welcome to Round 3</h1>
-   <div id="camera"></div>
-   <button onclick="take_snapshot()">Take A Snap</button>
-   <div id="results"></div>
-   <button onclick="upload_snapshot()">Upload</button>
-   <a href="{{url_for('getphoto4')}}"><button >Proceed To Next Round</button></a>
-  </body>
+
+<!--Header section-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <a class="navbar-brand" href="#">
+              <img src="meme_logo.png" alt="" width="40" height="30" class="d-inline-block align-top">
+            </a>
+          <a class="navbar-brand" href="#">memOmania</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+            </ul>
+            
+              <a href="login.html">
+              <button class="btn btn-danger" type="submit">LOGOUT</button>
+              </a>
+           
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+
+
+
+
+
+
+  <h1 style="margin-top:30px; text-align:center;">Welcome to Round 2</h1>
+
+
+
+
+
+
+<br><br>
+
+
+
+
+ <div class="container"> 
+        <div class="row"> 
+            <div class=" col-lg-6"> 
+                <div class="card"> 
+                      <h5 class="card-header h5 text-center"> 
+                       Meme 
+                    </h5> 
+                    <div class="card-body" style="             -moz-box-shadow:    inset 0 0 10px #b7afff;
+   -webkit-box-shadow: inset 0 0 50px #b7afff;
+   box-shadow:         inset 0 0 50px #b7afff;"> 
+                        <div class="booth"> 
+    <img src="https://image.winudf.com/v2/image1/Y29tLmNvY29udXQ1OTYxLmJlc3RtZW1lX3NjcmVlbl8zXzE1NTQ2NzgzMzNfMDg3/screen-3.jpg?fakeurl=1&type=.jpg" alt="Sample"  width='100%' height="100%" style="border:solid 25px #dddaff; ">
+                        </div> 
+  
+   
+                    </div> 
+                </div> 
+            </div> 
+
+
+
+
+
+            <div class=" col-lg-6"> 
+                <div class="card" > 
+                    <h5 class="card-header h5 text-center"> 
+                       Make your expression 
+                    </h5> 
+                    <div class="card-body" style="             -moz-box-shadow:    inset 0 0 10px #b7afff;
+   -webkit-box-shadow: inset 0 0 50px #b7afff;
+   box-shadow:         inset 0 0 50px #b7afff;"> 
+                        <div class="booth"> 
+                          <div id="camera"></div>
+                        </div> 
+
+
+                        <div class="mt-2 text-right d-flex col-4 mx-auto"> 
+                         <button class="btn btn-success"  type='button'onclick="take_snapshot()">Take A Snap</button>
+                        
+
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+
+
+        </div> 
+        <br><br>
+        <div class="d-flex col-4 mx-auto  text-center" id="results"></div>
+
+                                 <br>
+<div class="d-flex col-4  text-center" style="margin-left:530px">
+ <button class="btn btn-primary btn-lg" type="button" onclick="upload_snapshot()">Upload</button>
+</div>
+<br>
+ 
+ <a href="round2.html" target="_blank">
+ <div class="d-flex col-4 " style="margin-left:450px">
+  <a  href="{{url_for('getphoto4')}}"><button class="btn btn-outline-info btn-lg"  type="button">Proceed To Next Round</button></a>
+  </a>
+ </div>
+    </div> 
+<br><br>
+
+<div class="d-flex col-4" style="margin-left:550px">
+<button id="myBtn" class="btn btn-success" onmousedown="bleep.play()"  style=" 
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);">Submit</button>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+
+<img src="https://img.icons8.com/bubbles/200/000000/trophy.png" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;">
+
+                 <h4 style="text-align:center;">CONGRATULATIONS!</h4>
+  <div class="cent">    
+    <div class="d-flex col-6" style="margin-left:250px">
+               <a href="round2.html">
+   <button class='continue'>NEXT ROUND</button>
+               </a>
+    </div>
+  </div>
+    </p>
+  </div>
+
+</div>
+
+<script>
+var bleep=new Audio();
+bleep.src='./Congratulations.mp3';
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
   <script>
       Webcam.set({
-          width:250,
-          height:250,
+          width:450,
+          height:450,
           image_format:'jpeg',
           jpeg_quality:90
       })
@@ -51,4 +315,38 @@
 
 
   </script>
+  
+
+
+
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
